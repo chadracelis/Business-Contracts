@@ -15,7 +15,7 @@ contract EventContract {
   mapping(address => mapping(uint => uint)) public tickets; 
   // From left to right: address = ticket holder, uint: eventId, uint: amount of tickets
   
-  uint public nextId = 1;
+  uint public nextId;
   
   modifier eventExist(uint id) {
     require(events[id].date != 0, 'This event does not exist!');
